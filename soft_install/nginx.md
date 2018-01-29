@@ -32,13 +32,10 @@ wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
 ```
 # 解压
 tar zxvf pcre-8.35.tar.gz
-
 cd pcre-8.35
-
 # 编译安装
 ./configure
 make && make install
-
 ```
 
 3. 查看pcre版本
@@ -59,13 +56,10 @@ wget http://nginx.org/download/nginx-1.9.9.tar.gz
 ```
 # 解压
 tar zxvf nginx-1.9.9.tar.gz
-
 cd nginx-1.9.9
-
 # 编译安装
 ./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=~/pcre-8.35
 make && make install
-
 ```
 
 3. 查看nginx版本
