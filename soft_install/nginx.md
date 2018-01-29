@@ -29,7 +29,7 @@ cd ~
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
 ```
 
-2, 安装
+2. 安装
 
 ```
 # 解压
@@ -77,5 +77,6 @@ make && make install
 ```
 /usr/local/webserver/nginx/sbin/nginx -v
 ```
+
 
 到此，nginx安装完成。
