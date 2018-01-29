@@ -12,13 +12,11 @@ Nginx("engine x")是一款是由俄罗斯的程序设计师Igor Sysoev所开发�
 
 
 ### 一、安装编译工具及库文件
-
 ```
 yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 ```
 
 ### 二、首先要安装 PCRE
-
 > PCRE 作用是让 Nginx 支持 Rewrite 功能。
 
 
@@ -39,7 +37,6 @@ make && make install
 ```
 
 3. 查看pcre版本
-
 ```
 pcre-config --version
 ```
