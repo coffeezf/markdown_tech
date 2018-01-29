@@ -23,14 +23,11 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 
 
 1. 下载 PCRE 安装包，下载地址： http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz 
-
 ```
 cd ~
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
 ```
-
 2. 安装
-
 ```
 # 解压
 tar zxvf pcre-8.35.tar.gz
@@ -42,7 +39,6 @@ cd pcre-8.35
 make && make install
 
 ```
-
 3. 查看pcre版本
 
 ```
@@ -52,14 +48,11 @@ pcre-config --version
 ### 三、安装Nginx
 
 1. 下载 Nginx，下载地址：http://nginx.org/download/nginx-1.9.9.tar.gz
-
 ```
 cd ~
 wget http://nginx.org/download/nginx-1.9.9.tar.gz
 ```
-
 2. 安装
-
 ```
 # 解压
 tar zxvf nginx-1.9.9.tar.gz
@@ -71,9 +64,7 @@ cd nginx-1.9.9
 make && make install
 
 ```
-
 3. 查看nginx版本
-
 ```
 /usr/local/webserver/nginx/sbin/nginx -v
 ```
