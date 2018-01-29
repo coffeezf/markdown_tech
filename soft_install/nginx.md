@@ -27,6 +27,7 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 cd ~
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz
 ```
+
 2. 安装
 ```
 # 解压
@@ -39,6 +40,7 @@ cd pcre-8.35
 make && make install
 
 ```
+
 3. 查看pcre版本
 
 ```
@@ -52,6 +54,7 @@ pcre-config --version
 cd ~
 wget http://nginx.org/download/nginx-1.9.9.tar.gz
 ```
+
 2. 安装
 ```
 # 解压
@@ -64,6 +67,7 @@ cd nginx-1.9.9
 make && make install
 
 ```
+
 3. 查看nginx版本
 ```
 /usr/local/webserver/nginx/sbin/nginx -v
