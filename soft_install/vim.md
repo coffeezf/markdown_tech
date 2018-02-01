@@ -63,8 +63,8 @@ filetype plugin indent on " required
 ```
 
 3. 通过Vunder安装其他插件方法
-* 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
-* 或者：vim +PluginInstall +qall
+  * 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
+  * 或者：vim +PluginInstall +qall
 
 
 
