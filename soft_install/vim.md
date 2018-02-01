@@ -13,7 +13,7 @@
 
 > git源：[Vunder.vim](https://github.com/VundleVim/Vundle.vim)
 
-1. 安装
+- 安装
 ```
 cd ~
 mkdir -p ~/.vim/bundle
@@ -21,7 +21,7 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
-2. 下面贴出我的配置~/.vimrc
+- 下面贴出我的配置~/.vimrc
 
 > 基础配置部分
 
@@ -159,7 +159,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 ```
 
-3. 通过Vunder安装其他插件方法
+- 通过Vunder安装其他插件方法
   + 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
   + 或者：vim +PluginInstall +qall
 
