@@ -5,13 +5,13 @@
 > 参考：[把vim配置成顺手的python轻量级IDE](https://www.jianshu.com/p/f0513d18742a)
 
 ## 插件对比
-1. vim插件管理器
++ vim插件管理器
 
 > vim-pathogen VS Vundle.vim
 > 这两个插件都可谓是vim的神器，用来进行vim的插件管理。pathogen配置好之后使用方便之处在于只需要把你下载的vim插件放到~/.vim/bundle（也可自定义）目录下即可，而vundel每次需要更改vimrc文件，不过vundel的方便之处在于更改完vimrc文件之后，可以直接在vim里使用:PluginInstall来进行插件的一键安装，原理就是自动从GitHub等源上自动下载。
 > 这里我选择的是vundle，因为可以一眼从配置文件看出我安装了哪些插件，不需要的插件直接注释掉即可
 
-2. python支持
++ python支持
 
 > Jedi-vim  VS  Python-mode  VS  YouCompleteMe
 > python-mode:
@@ -24,18 +24,18 @@
 >    优点：优点对我来说，就是上面两个的缺点它都弥补了。加载速度挺快，页面也挺简洁。
 >    缺点：没有语法检测；功能没YCM强大，但是够用足矣。
 
-3. python语法检测
++ python语法检测
 
 > 有了自动补全之后就是语法检测，个人倾向pep8标准，而且希望语法错误修正之后能够被编辑器马上识别。
 > 我测过用以下几种做checker：
 > flake8、pep257、pep8、pycodestyle、syntastic、pydocstyle、pyflakes、pylama、pylint、python
 > 而最终我选择了用插件："w0rp/ale",它的语法检测最全面，界面简洁，错误修正之后能够被马上识别出，而且是异步的，不必担心加载过慢崩溃等问题。
 
-4. 加强版自动补全
++ 加强版自动补全
 
 > 之前提到在vim里面python的自动补全，为了使vim的功能更加强大，介绍一款插件neocomplete.vim，使用它可谓让vim的补全无处不在。
 
-5. 目录树插件
++ 目录树插件
 
 > 目录树插件自然是NERDTree，外加一个vim-nerdtree-tabs补强功能。
 
