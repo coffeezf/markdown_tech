@@ -8,27 +8,41 @@
 + vim插件管理器
 
 > vim-pathogen VS Vundle.vim
+
 > 这两个插件都可谓是vim的神器，用来进行vim的插件管理。pathogen配置好之后使用方便之处在于只需要把你下载的vim插件放到~/.vim/bundle（也可自定义）目录下即可，而vundel每次需要更改vimrc文件，不过vundel的方便之处在于更改完vimrc文件之后，可以直接在vim里使用:PluginInstall来进行插件的一键安装，原理就是自动从GitHub等源上自动下载。
+
 > 这里我选择的是vundle，因为可以一眼从配置文件看出我安装了哪些插件，不需要的插件直接注释掉即可
 
 + python支持
 
 > Jedi-vim  VS  Python-mode  VS  YouCompleteMe
+
 > python-mode:
+
 >    优点：能够自动补全，自带python语法检测和代码折叠等功能，很强大。
+
 >    缺点：自动补全时顺带显示函数的帮助信息，页面显示不够简洁、美观；语法检测功能一般。
+
 > YouCompleteMe：
+
 >    优点：自动补全，界面简洁，支持多语言，功能非常强大、完整。三者之中在github上star数量最多。
+
 >    缺点：可能由于功能过于强大,加语法检测之后加载相对稍慢。配置略繁琐。
+
 > jedi-vim：
+
 >    优点：优点对我来说，就是上面两个的缺点它都弥补了。加载速度挺快，页面也挺简洁。
+
 >    缺点：没有语法检测；功能没YCM强大，但是够用足矣。
 
 + python语法检测
 
 > 有了自动补全之后就是语法检测，个人倾向pep8标准，而且希望语法错误修正之后能够被编辑器马上识别。
+
 > 我测过用以下几种做checker：
+
 > flake8、pep257、pep8、pycodestyle、syntastic、pydocstyle、pyflakes、pylama、pylint、python
+
 > 而最终我选择了用插件："w0rp/ale",它的语法检测最全面，界面简洁，错误修正之后能够被马上识别出，而且是异步的，不必担心加载过慢崩溃等问题。
 
 + 加强版自动补全
