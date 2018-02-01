@@ -24,13 +24,11 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 set nocompatible " be iMproved, required
 filetype off " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
@@ -48,7 +46,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a different version somewhere else.
 Plugin 'ascenator/L9', {'name': 'newL9'}
-
 " All of your Plugins must be added before the following line
 call vundle#end() " required
 filetype plugin indent on " required
@@ -63,10 +60,10 @@ filetype plugin indent on " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 ```
 
 3. 通过Vunder安装其他插件方法
+
 * 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
 * 或者：vim +PluginInstall +qall
 
