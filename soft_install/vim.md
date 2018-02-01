@@ -80,8 +80,8 @@ set autoindent "自动缩进"
 " 启用语法高亮度
 syntax enable
         ```
-    
-    + Vundle管理的插件：
+
+  + Vundle管理的插件：
         
         ```
 " 使用Vundle管理其他插件
@@ -121,7 +121,7 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
         ```
 
-    + NERDTree插件使用的配置信息：
+  + NERDTree插件使用的配置信息：
         ```
 " 打开或关闭NERDTree快捷键
 map <F2> :NERDTreeToggle<CR>
