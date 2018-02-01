@@ -23,7 +23,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 2. 下面贴出我的配置~/.vimrc
   + 基础配置部分
-  ```
+    ```
 " 显示行号
 set nu
 " 去掉vi的一致性（不要使用vi的键盘模式，而是vim自己的）
@@ -80,8 +80,7 @@ set autoindent "自动缩进"
 syntax enable
 ```
   + Vundle管理的插件：
-
-```
+    ```
 " 使用Vundle管理其他插件
 " Vundle config plugin start
 filetype off " required
@@ -120,8 +119,7 @@ filetype plugin indent on
 ```
 
   + NERDTree插件使用的配置信息：
-
-```
+    ```
 " 打开或关闭NERDTree快捷键
 map <F2> :NERDTreeToggle<CR>
 " 显示行号
