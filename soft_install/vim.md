@@ -4,7 +4,7 @@
 
 > 参考：[把vim配置成顺手的python轻量级IDE](https://www.jianshu.com/p/f0513d18742a)
 
-## 安装Vim插件管理器Vundle.vim
+## 安装Vundle.vim
 
 >  插件对比：
 >> vim-pathogen VS Vundle.vim:
@@ -13,7 +13,7 @@
 
 > git源：[Vunder.vim](https://github.com/VundleVim/Vundle.vim)
 
-#### 安装
+1. #### 安装
 
 ```
 cd ~
@@ -22,9 +22,9 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
-#### 下面贴出我的配置~/.vimrc
+2. #### 下面贴出我的配置~/.vimrc
 
-1. 基础配置部分
+2. 1. 基础配置部分
 
 ```
 " 显示行号
@@ -83,7 +83,7 @@ set autoindent "自动缩进"
 syntax enable
 ```
 
-2. Vundle管理的插件：
+2. 2. Vundle管理的插件：
    
 ```
 " 使用Vundle管理其他插件
@@ -123,7 +123,7 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 ```
 
-3. NERDTree插件使用的配置信息：
+2. 3. NERDTree插件使用的配置信息：
 
 ```
 " 打开或关闭NERDTree快捷键
@@ -160,8 +160,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 ```
 
-#### 通过Vunder安装其他插件方法
-
+3. #### 通过Vunder安装其他插件方法
   + 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
   + 或者：vim +PluginInstall +qall
 
