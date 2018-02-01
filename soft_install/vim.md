@@ -22,8 +22,9 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
 2. 下面贴出我的配置~/.vimrc
-    + 基础配置部分
-        ```
+   + 基础配置部分
+   
+       ```
 " 显示行号
 set nu
 " 去掉vi的一致性（不要使用vi的键盘模式，而是vim自己的）
