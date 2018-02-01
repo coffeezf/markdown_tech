@@ -6,7 +6,8 @@
 
 ## 安装Vim插件管理器Vundle.vim
 
->  附插件对比：vim-pathogen VS Vundle.vim:
+>  插件对比：
+>> vim-pathogen VS Vundle.vim:
 这两个插件都可谓是vim的神器，用来进行vim的插件管理。pathogen配置好之后使用方便之处在于只需要把你下载的vim插件放到~/.vim/bundle（也可自定义）目录下即可，而vundel每次需要更改vimrc文件，不过vundel的方便之处在于更改完vimrc文件之后，可以直接在vim里使用:PluginInstall来进行插件的一键安装，原理就是自动从GitHub等源上自动下载。
 这里我选择的是vundle，因为可以一眼从配置文件看出我安装了哪些插件，不需要的插件直接注释掉即可。如下图Plugin部分就是我安装的插件，一目了然。
 
@@ -21,6 +22,9 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
 2. 下面贴出我的配置~/.vimrc
+
+> 基础配置部分
+
 ```
 " 显示行号
 set nu
@@ -66,7 +70,6 @@ set fenc=utf-8
 set cursorline
 " 突出显示当前列
 set cursorcolumn
-
 set ts=4
 set tabstop=4 "设置table长度"
 set expandtab "用空格代替制表符"
@@ -75,25 +78,18 @@ set shiftwidth=4
 set smartindent "智能缩进"
 set cindent "C语言风格缩进"
 set autoindent "自动缩进"
-
 " 启用语法高亮度
 syntax enable
+```
 
+> Vundle管理的插件：
 
-
-
-
-
-
-
-
+```
 " 使用Vundle管理其他插件
 " Vundle config plugin start
 filetype off " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-
 
 Plugin 'VundleVim/Vundle.vim'
 " python 自动补全 Jedi-vim 
@@ -113,8 +109,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-
-
 call vundle#end()
 filetype plugin indent on
 " Vundle config plugin end
@@ -126,14 +120,11 @@ filetype plugin indent on
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+```
 
+> NERDTree插件使用的配置信息：
 
-
-
-
-
-
-
+```
 " 打开或关闭NERDTree快捷键
 map <F2> :NERDTreeToggle<CR>
 " 显示行号
@@ -153,7 +144,6 @@ let NERDTreeShowBookmarks=1
 " autocmd VimEnter * NERDTree
 " 打开新的buffer时自动定位到编辑窗口 
 " autocmd VimEnter * wincmd p
-
 
 " git信息直接在NERDTree中显示出来
 let g:NERDTreeIndicatorMapCustom = {
