@@ -22,9 +22,10 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
-#### 下面贴出我的配置~/.vimrc
+#### 配置~/.vimrc
 
-1. 基础配置部分
+  1. 基础配置部分\
+
 ```
 " 显示行号
 set nu
@@ -82,7 +83,8 @@ set autoindent "自动缩进"
 syntax enable
 ```
 
-2. Vundle管理的插件：
+  2. Vundle管理的插件：
+
 ```
 " 使用Vundle管理其他插件
 " Vundle config plugin start
@@ -121,7 +123,8 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 ```
 
-3. NERDTree插件使用的配置信息：
+  3. NERDTree插件使用的配置信息：
+
 ```
 " 打开或关闭NERDTree快捷键
 map <F2> :NERDTreeToggle<CR>
@@ -158,8 +161,8 @@ let g:NERDTreeIndicatorMapCustom = {
 ```
 
 #### 通过Vunder安装其他插件方法
-+ 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
-+ 或者：vim +PluginInstall +qall
+  + 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
+  + 或者：vim +PluginInstall +qall
 
 
 
