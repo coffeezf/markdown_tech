@@ -13,7 +13,8 @@
 
 > git源：[Vunder.vim](https://github.com/VundleVim/Vundle.vim)
 
-### > 安装
+> 安装
+
 ```
 cd ~
 mkdir -p ~/.vim/bundle
@@ -21,7 +22,8 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
-### > 下面贴出我的配置~/.vimrc
+> 下面贴出我的配置~/.vimrc
+
 > > 基础配置部分
 
 ```
