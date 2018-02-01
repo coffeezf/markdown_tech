@@ -20,38 +20,104 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
 
-2. 配置~/.vimrc
+2. 下面贴出我的配置~/.vimrc
 ```
-set nocompatible " be iMproved, required
+" 显示行号
+set nu
+" 去掉vi的一致性（不要使用vi的键盘模式，而是vim自己的）
+set nocompatible
+" 隐藏滚动条
+set guioptions-=r 
+set guioptions-=L
+set guioptions-=b
+" 隐藏顶部标签栏
+set showtabline=0
+" 设置字体
+set guifont=Monaco:h13
+" 开启语法高亮
+syntax on
+" 使回格键（backspace）正常处理indent, eol, start等
+"set backspace=index,eol,start
+" 设置背景色
+set background=dark
+" 设置table长度
+set tabstop=4
+set shiftwidth=4
+" 显示匹配的括号
+set showmatch
+" 距离顶部和底部5行
+set scrolloff=5
+" 命令行为两行
+set laststatus=2
+" 设定默认编码
+set fenc=utf-8
+" 启用鼠标
+"set mouse=a
+"set selection=exclusive
+"set selectmode=mouse,key
+"set matchtime=5
+" 检索时忽略大小写忽略大小写
+"set ignorecase
+" 允许backspace和光标键跨越行边界
+"set whichwrap+=<,>,h,l
+" 文件在Vim之外修改过，自动重新读入
+"set autoread
+" 突出显示当前行
+set cursorline
+" 突出显示当前列
+set cursorcolumn
+
+set ts=4
+set tabstop=4 "设置table长度"
+set expandtab "用空格代替制表符"
+set softtabstop=4 "一缩进为4"
+set shiftwidth=4
+set smartindent "智能缩进"
+set cindent "C语言风格缩进"
+set autoindent "自动缩进"
+
+" 启用语法高亮度
+syntax enable
+
+
+
+
+
+
+
+
+
+" 使用Vundle管理其他插件
+" Vundle config plugin start
 filetype off " required
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-" let Vundle manage Vundle, required
+
+
+
 Plugin 'VundleVim/Vundle.vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a different version somewhere else.
-Plugin 'ascenator/L9', {'name': 'newL9'}
-" All of your Plugins must be added before the following line
-call vundle#end() " required
-filetype plugin indent on " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+" python 自动补全 Jedi-vim 
+Plugin 'davidhalter/jedi-vim'
+" python 语法检测 pep8
+Plugin 'w0rp/ale'
+" python 加强版自动补全 neocomplete.vim
+Plugin 'Shougo/neocomplete.vim'
+
+" NERDTree 
+Plugin 'scrooloose/nerdtree'
+" NERDTree增强功能 vim-nerdtree-tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+" nerdtree-git-plugin
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+
+
+call vundle#end()
+filetype plugin indent on
+" Vundle config plugin end
 " Brief help
 " :PluginList - lists configured plugins
 " :PluginInstall - installs plugins; append '!' to update or just :PluginUpdate
@@ -60,6 +126,48 @@ filetype plugin indent on " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+
+
+
+
+
+
+
+" 打开或关闭NERDTree快捷键
+map <F2> :NERDTreeToggle<CR>
+" 显示行号
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+" 是否显示隐藏文件
+let NERDTreeShowHidden=1
+" 设置宽度
+let NERDTreeWinSize=31
+" 在终端启动vim时，共享NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+" 忽略以下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+" 显示书签列表
+let NERDTreeShowBookmarks=1
+" 启动vim自动打开NERDTree
+" autocmd VimEnter * NERDTree
+" 打开新的buffer时自动定位到编辑窗口 
+" autocmd VimEnter * wincmd p
+
+
+" git信息直接在NERDTree中显示出来
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
 ```
 
 3. 通过Vunder安装其他插件方法
