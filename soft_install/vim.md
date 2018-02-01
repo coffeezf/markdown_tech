@@ -4,16 +4,17 @@
 
 > 参考：[把vim配置成顺手的python轻量级IDE](https://www.jianshu.com/p/f0513d18742a)
 
-## 安装Vundle.vim
+## 插件对比
 
->  插件对比：
->> vim-pathogen VS Vundle.vim:
+--------
+
+> vim-pathogen VS Vundle.vim:
 这两个插件都可谓是vim的神器，用来进行vim的插件管理。pathogen配置好之后使用方便之处在于只需要把你下载的vim插件放到~/.vim/bundle（也可自定义）目录下即可，而vundel每次需要更改vimrc文件，不过vundel的方便之处在于更改完vimrc文件之后，可以直接在vim里使用:PluginInstall来进行插件的一键安装，原理就是自动从GitHub等源上自动下载。
 这里我选择的是vundle，因为可以一眼从配置文件看出我安装了哪些插件，不需要的插件直接注释掉即可。如下图Plugin部分就是我安装的插件，一目了然。
 
-> git源：[Vunder.vim](https://github.com/VundleVim/Vundle.vim)
+--------
 
-#### 安装
+## 安装Vundle [git源Vunder.vim](https://github.com/VundleVim/Vundle.vim)
 
 ```
 cd ~
@@ -21,11 +22,13 @@ mkdir -p ~/.vim/bundle
 # 从github上得到项目的源码
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ``` 
+> 通过Vunder安装其他插件方法:
+> + 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
+> + 或者：vim +PluginInstall +qall
 
-#### 配置~/.vimrc
+## 配置~/.vimrc
 
-  1. 基础配置部分\
-
+1. 基础配置部分
 ```
 " 显示行号
 set nu
@@ -83,8 +86,7 @@ set autoindent "自动缩进"
 syntax enable
 ```
 
-  2. Vundle管理的插件：
-
+2. Vundle管理的插件：
 ```
 " 使用Vundle管理其他插件
 " Vundle config plugin start
@@ -123,8 +125,7 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 ```
 
-  3. NERDTree插件使用的配置信息：
-
+3. NERDTree插件使用的配置信息：
 ```
 " 打开或关闭NERDTree快捷键
 map <F2> :NERDTreeToggle<CR>
@@ -159,10 +160,4 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 ```
-
-#### 通过Vunder安装其他插件方法
-  + 编辑~.vimrc，添加插件；启动vim，运行:PluginInstall
-  + 或者：vim +PluginInstall +qall
-
-
 
