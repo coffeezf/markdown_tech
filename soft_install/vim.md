@@ -5,7 +5,6 @@
 > 参考：[把vim配置成顺手的python轻量级IDE](https://www.jianshu.com/p/f0513d18742a)
 
 ## 插件对比
-
 1. vim插件管理器
 
 > vim-pathogen VS Vundle.vim
