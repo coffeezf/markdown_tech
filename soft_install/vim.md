@@ -93,7 +93,6 @@ syntax enable
 filetype off " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 " python 自动补全 Jedi-vim 
 Plugin 'davidhalter/jedi-vim'
@@ -101,7 +100,6 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'w0rp/ale'
 " python 加强版自动补全 neocomplete.vim
 Plugin 'Shougo/neocomplete.vim'
-
 " NERDTree 
 Plugin 'scrooloose/nerdtree'
 " NERDTree增强功能 vim-nerdtree-tabs
@@ -111,7 +109,6 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-
 call vundle#end()
 filetype plugin indent on
 " Vundle config plugin end
@@ -146,7 +143,6 @@ let NERDTreeShowBookmarks=1
 " autocmd VimEnter * NERDTree
 " 打开新的buffer时自动定位到编辑窗口 
 " autocmd VimEnter * wincmd p
-
 " git信息直接在NERDTree中显示出来
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
